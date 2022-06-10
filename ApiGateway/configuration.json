@@ -1,0 +1,132 @@
+{
+  "ReRoutes": [
+    {
+      "DownstreamPathTemplate": "/api/Values",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "localhost",
+      "DownstreamPort": 9000,
+      "UpstreamPathTemplate": "/Values",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QosOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeOUtValue": 5000
+      }
+    },
+    //getairlines
+    {
+      "DownstreamPathTemplate": "/api/Admin/getAirlines",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "localhost",
+      "DownstreamPort": 9000,
+      "UpstreamPathTemplate": "/Airlines",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QosOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeOUtValue": 5000
+      }
+    },
+    //getAirlineNyId
+    {
+      "DownstreamPathTemplate": "/api/Admin/getAirlinesById",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "localhost",
+      "DownstreamPort": 9000,
+      "UpstreamPathTemplate": "/AirlinesById",
+      "UpstreamHttpMethod": [ "Get" ],
+      "QosOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeOUtValue": 5000
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/Admin/addAirline",
+      "DownstreamScheme": "http",
+      "DownstreamHost": "localhost",
+      "DownstreamPort": 9000,
+      "UpstreamPathTemplate": "/AddAirlines",
+      "UpstreamHttpMethod": [ "Post" ],
+      "QosOptions": {
+        "ExceptionsAllowedBeforeBreaking": 3,
+        "DurationOfBreak": 10,
+        "TimeOUtValue": 5000
+      }
+    },
+    {
+      "downstreampathtemplate": "/api/User",
+      "downstreamscheme": "http",
+      "downstreamhost": "localhost",
+      "downstreamport": 8000,
+      "upstreampathtemplate": "/User",
+      "upstreamhttpmethod": [ "get" ],
+      "qosoptions": {
+        "exceptionsallowedbeforebreaking": 3,
+        "durationofbreak": 10,
+        "timeoutvalue": 5000
+      }
+    },
+    //flight search
+    {
+      "downstreampathtemplate": "/api/Flights/SearchFlights",
+      "downstreamscheme": "http",
+      "downstreamhost": "localhost",
+      "downstreamport": 8000,
+      "upstreampathtemplate": "/Search1",
+      "upstreamhttpmethod": [ "Post" ],
+      "qosoptions": {
+        "exceptionsallowedbeforebreaking": 3,
+        "durationofbreak": 10,
+        "timeoutvalue": 5000
+      }
+    },
+    //user login
+    {
+      "downstreampathtemplate": "/api/Flights/UserLogin",
+      "downstreamscheme": "http",
+      "downstreamhost": "localhost",
+      "downstreamport": 8000,
+      "upstreampathtemplate": "/UserLogin",
+      "upstreamhttpmethod": [ "Post" ],
+      "qosoptions": {
+        "exceptionsallowedbeforebreaking": 3,
+        "durationofbreak": 10,
+        "timeoutvalue": 5000
+      }
+    },
+    //Search Flightsssss
+    {
+      "downstreampathtemplate": "/api/Flights/FlightSearch",
+      "downstreamscheme": "http",
+      "downstreamhost": "localhost",
+      "downstreamport": 8000,
+      "upstreampathtemplate": "/flightSearch",
+      "upstreamhttpmethod": [ "Post" ],
+      "qosoptions": {
+        "exceptionsallowedbeforebreaking": 3,
+        "durationofbreak": 10,
+        "timeoutvalue": 5000
+      }
+    },
+    //ticket by pnr
+    {
+      "downstreampathtemplate": "/api/Flights/ticketByPnr",
+      "downstreamscheme": "http",
+      "downstreamhost": "localhost",
+      "downstreamport": 8000,
+      "upstreampathtemplate": "/PNR",
+      "upstreamhttpmethod": [ "Get" ],
+      "qosoptions": {
+        "exceptionsallowedbeforebreaking": 3,
+        "durationofbreak": 10,
+        "timeoutvalue": 5000
+      }
+    }
+  ],
+
+  "GlobalConfiguration": {
+    "RequestIdKey": "OcRequestId",
+    "AdministrationPath": "/administration"
+  }
+}
